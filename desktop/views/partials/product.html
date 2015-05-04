@@ -1,0 +1,24 @@
+<template name="product">
+	<div class="small-6 medium-3 columns end">
+			<div class="product-container">
+				<div class="image-container">
+					{{#with image}}
+						<img src="{{this.url}}" class="product-image" alt="" />
+					{{/with}}
+				</div>
+				<div class="product-details">
+					<div class="product-title">
+						<a href="/productpage">{{title}}</a>
+					</div>
+					<div class="product-price">
+						{{price}}
+					</div>
+					<div class="product-buttons">
+						<span class="icon-heart"></span>
+						<span class="icon-repost"></span>
+						<span class="icon-plus"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+</template>

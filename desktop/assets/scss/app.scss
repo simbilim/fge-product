@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+@import "normalize.scss";
+
+//local Foundation settings file. Copy it from git repo -> scss/foundation/_settings.scss near main .scss file. Then Uncomment the line below.
+@import "settings";
+
+@import "foundation/components/grid.scss";
+@import "foundation/components/accordion.scss";
+@import "foundation/components/alert-boxes.scss";
+@import "foundation/components/block-grid.scss";
+@import "foundation/components/breadcrumbs.scss";
+@import "foundation/components/button-groups.scss";
+@import "foundation/components/buttons.scss";
+@import "foundation/components/clearing.scss";
+@import "foundation/components/dropdown.scss";
+@import "foundation/components/dropdown-buttons.scss";
+@import "foundation/components/flex-video.scss";
+@import "foundation/components/forms.scss";
+@import "foundation/components/icon-bar.scss";
+@import "foundation/components/inline-lists.scss";
+@import "foundation/components/joyride.scss";
+@import "foundation/components/keystrokes.scss";
+@import "foundation/components/labels.scss";
+@import "foundation/components/magellan.scss";
+@import "foundation/components/orbit.scss";
+@import "foundation/components/pagination.scss";
+@import "foundation/components/panels.scss";
+@import "foundation/components/pricing-tables.scss";
+@import "foundation/components/progress-bars.scss";
+@import "foundation/components/range-slider.scss";
+@import "foundation/components/reveal.scss";
+@import "foundation/components/side-nav.scss";
+@import "foundation/components/split-buttons.scss";
+@import "foundation/components/sub-nav.scss";
+@import "foundation/components/switches.scss";
+@import "foundation/components/tables.scss";
+@import "foundation/components/tabs.scss";
+@import "foundation/components/thumbs.scss";
+@import "foundation/components/tooltips.scss";
+@import "foundation/components/top-bar.scss";
+@import "foundation/components/type.scss";
+@import "foundation/components/offcanvas.scss";
+@import "foundation/components/visibility.scss";
+
+// your project styles goes here
+
+.grid-content{
+	margin: 0 auto;
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-tfgyja');
+	src:url('fonts/icomoon.eot?#iefix-tfgyja') format('embedded-opentype'),
+	url('fonts/icomoon.woff?-tfgyja') format('woff'),
+	url('fonts/icomoon.ttf?-tfgyja') format('truetype'),
+	url('fonts/icomoon.svg?-tfgyja#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+$black: black;
+$grey: #ccc;
+$blue: #6F9CEB;
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-profile:before {
+	content: "\e600";
+}
+
+.icon-heart{
+	color: $grey;
+	&:hover{
+		color: $primary-color;
+	}
+	&:before{
+		content: "\e601";
+	}
+}
+
+.icon-plus{
+	color: $grey;
+	&:hover{
+		color: black;
+	}
+	&:before{
+		content: "\e602";
+	}
+}
+
+.icon-repost{
+	color: $grey;
+	&:hover{
+		color: $blue;
+	}
+	&:before{
+		content: "\e600";
+	}
+}
+.box-shadow{
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.10);
+}
+.underline{
+	text-decoration: underline;
+}
+ul.no-style{
+	list-style-type: none;
+	margin-left: 0;
+}
+.price{
+	font-weight: 900;
+	&:before{
+		content: "\20AC"" ";
+	}
+}
+ul#product-meta{
+	@extend .box-shadow;
+	padding: 10px;
+	li{
+		margin-bottom: 10px;
+	}
+}
+#collectors{
+	// @extend .box-shadow;
+	margin: 0 0 30px 0;
+}
+.top-bar{
+	margin-bottom: 30px;
+}
+.product-container{
+	margin: 0 0 30px 0;
+	@extend .box-shadow;
+	.image-container{
+		position: relative;
+		.product-image{
+			position: relative;
+			display: block;
+			margin: auto;
+		}
+		.profile-picture{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+	}
+	.product-details{
+		padding: 10px;
+		.product-title{
+			font-weight: 200;
+			font-size: rem-calc(14);
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			a{
+				color: $black;
+			}
+		}
+		.product-price{
+			@extend .price;
+			font-size: rem-calc(12);
+		}
+	}
+}
+.comments{
+	margin: 0 0 30px 0;
+	.profile-pic{
+		float: left;
+	}
+	.username{
+		float: left;
+		font-weight: 900;
+		margin: 3px 0 0 10px;
+	}
+}

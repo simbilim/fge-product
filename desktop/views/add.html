@@ -1,0 +1,46 @@
+<template name="add">
+
+	<div class="row">
+		<div class="small-12 medium-8 columns medium-centered">
+			<form>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Select category
+							<select>
+								<option selected disabled>Choose a category</option>
+								{{#each categories}}
+								<option id="category" value="{{title}}">{{title}}</option>
+								{{/each}}
+							</select>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+						<label>Product title
+							<input id="title" type="text" placeholder="Product title" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+						<label>Product price
+							<input id="price" type="text" placeholder="Product price" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+						<label>Product image
+							<input id="file" type="file" />
+						</label>
+					</div>
+				</div>
+				<button type="submit">Add Product</button>
+			</form>
+		</div>
+	</div>
+
+</template>
+
+
