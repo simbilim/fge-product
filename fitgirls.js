@@ -28,13 +28,14 @@
 			Template.home.helpers({
 			  	products: function () {
 			  		return Products.find({});
-			  	},
-			  	image:function(){ 
-					return console.log(productImages.findOne({'metadata.productId':this._id})); 
-					//return productImages.findOne({'metadata.productId':this._id})
 			  	}
 			});
-
+            Template.product.helpers({
+           image:function(){ 
+					 console.log(productImages.findOne({'metadata.productId':this._id})); 
+					return productImages.findOne({'metadata.productId':this._id})
+			  	}
+            })
 
 			  Template.add.helpers({
 			  	categories: function(){
